@@ -1,4 +1,12 @@
 
+export interface Supplier {
+  id: string;
+  name: string;
+  contactPerson: string;
+  phone: string;
+  email: string;
+}
+
 export interface Pet {
   id: string;
   name: string;
@@ -9,7 +17,7 @@ export interface Pet {
 }
 
 export interface Client {
-  id: string;
+  id:string;
   name: string;
   phone: string;
   email: string;
@@ -51,7 +59,7 @@ export interface InventoryItem {
   category: InventoryCategory;
   quantity: number;
   unit: InventoryUnit;
-  supplier: string;
+  supplierId: string;
   lastPurchaseDate: string; // ISO string format
   lowStockThreshold: number;
 }
@@ -61,4 +69,5 @@ export enum Page {
   Clients = 'Clientes',
   Appointments = 'Agendamentos',
   Inventory = 'Estoque',
+  Suppliers = 'Fornecedores',
 }

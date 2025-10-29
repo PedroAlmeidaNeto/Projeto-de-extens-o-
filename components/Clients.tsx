@@ -27,23 +27,23 @@ const ClientForm: React.FC<{ onSubmit: (data: Omit<Client, 'id'>) => void; onClo
         <form onSubmit={handleSubmit} className="space-y-4">
             <div>
                 <label className="block text-sm font-medium text-gray-700">Nome Completo</label>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="text" value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Telefone</label>
-                <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="tel" value={phone} onChange={e => setPhone(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" value={email} onChange={e => setEmail(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="email" value={email} onChange={e => setEmail(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Endereço</label>
-                <input type="text" value={address} onChange={e => setAddress(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" />
+                <input type="text" value={address} onChange={e => setAddress(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" />
             </div>
             <div className="flex justify-end space-x-3 pt-4">
                 <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancelar</button>
-                <button type="submit" className="px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600">Salvar Cliente</button>
+                <button type="submit" className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600">Salvar Cliente</button>
             </div>
         </form>
     );
@@ -65,11 +65,11 @@ const PetForm: React.FC<{ ownerId: string; onSubmit: (data: Omit<Pet, 'id'>) => 
         <form onSubmit={handleSubmit} className="space-y-4">
             <div>
                 <label className="block text-sm font-medium text-gray-700">Nome do Pet</label>
-                <input type="text" value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="text" value={name} onChange={e => setName(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Espécie</label>
-                <select value={species} onChange={e => setSpecies(e.target.value as any)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500">
+                <select value={species} onChange={e => setSpecies(e.target.value as any)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500">
                     <option>Cachorro</option>
                     <option>Gato</option>
                     <option>Pássaro</option>
@@ -79,15 +79,15 @@ const PetForm: React.FC<{ ownerId: string; onSubmit: (data: Omit<Pet, 'id'>) => 
             </div>
              <div>
                 <label className="block text-sm font-medium text-gray-700">Raça</label>
-                <input type="text" value={breed} onChange={e => setBreed(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="text" value={breed} onChange={e => setBreed(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Data de Nascimento</label>
-                <input type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div className="flex justify-end space-x-3 pt-4">
                 <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancelar</button>
-                <button type="submit" className="px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600">Salvar Pet</button>
+                <button type="submit" className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600">Salvar Pet</button>
             </div>
         </form>
     );
@@ -121,7 +121,7 @@ export const Clients: React.FC<ClientsProps> = ({ clients, pets, addClient, addP
                 </div>
                 <div className="flex justify-between items-center mb-4">
                     <h3 className="text-2xl font-semibold text-gray-700">Pets</h3>
-                    <button onClick={() => setPetModalOpen(true)} className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600">
+                    <button onClick={() => setPetModalOpen(true)} className="flex items-center px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600">
                         <PlusIcon className="w-5 h-5 mr-2" /> Adicionar Pet
                     </button>
                 </div>
@@ -129,7 +129,7 @@ export const Clients: React.FC<ClientsProps> = ({ clients, pets, addClient, addP
                     <ul className="divide-y divide-gray-200">
                         {clientPets.length > 0 ? clientPets.map(pet => (
                             <li key={pet.id} className="p-4 flex items-center">
-                                <PawIcon className="w-8 h-8 text-teal-500 mr-4" />
+                                <PawIcon className="w-8 h-8 text-slate-500 mr-4" />
                                 <div>
                                     <p className="font-semibold text-gray-800">{pet.name}</p>
                                     <p className="text-sm text-gray-500">{pet.species} - {pet.breed}</p>
@@ -149,7 +149,7 @@ export const Clients: React.FC<ClientsProps> = ({ clients, pets, addClient, addP
         <div className="p-8">
             <div className="flex justify-between items-center mb-6">
                 <h1 className="text-4xl font-bold text-gray-800">Clientes</h1>
-                <button onClick={() => setClientModalOpen(true)} className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 shadow">
+                <button onClick={() => setClientModalOpen(true)} className="flex items-center px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600 shadow">
                     <PlusIcon className="w-5 h-5 mr-2" /> Novo Cliente
                 </button>
             </div>
@@ -160,7 +160,7 @@ export const Clients: React.FC<ClientsProps> = ({ clients, pets, addClient, addP
                     placeholder="Buscar cliente por nome..." 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500"
+                    className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-slate-500 focus:border-slate-500"
                 />
             </div>
 
@@ -169,8 +169,8 @@ export const Clients: React.FC<ClientsProps> = ({ clients, pets, addClient, addP
                     {filteredClients.map(client => (
                         <li key={client.id} onClick={() => setSelectedClient(client)} className="p-4 hover:bg-gray-50 cursor-pointer flex items-center justify-between">
                             <div className="flex items-center">
-                                <div className="p-3 bg-teal-100 rounded-full mr-4">
-                                    <UsersIcon className="w-6 h-6 text-teal-600" />
+                                <div className="p-3 bg-slate-100 rounded-full mr-4">
+                                    <UsersIcon className="w-6 h-6 text-slate-600" />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-800">{client.name}</p>

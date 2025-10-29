@@ -12,7 +12,7 @@ interface DashboardProps {
 
 const StatCard: React.FC<{ title: string; value: string | number; icon: React.ReactNode }> = ({ title, value, icon }) => (
   <div className="bg-white p-6 rounded-lg shadow-md flex items-center transition-transform hover:scale-105">
-    <div className="bg-teal-100 p-4 rounded-full mr-4">
+    <div className="bg-slate-100 p-4 rounded-full mr-4">
       {icon}
     </div>
     <div>
@@ -47,10 +47,10 @@ export const Dashboard: React.FC<DashboardProps> = ({ clients, pets, appointment
       <h1 className="text-4xl font-bold text-gray-800">Dashboard</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard title="Total de Clientes" value={clients.length} icon={<UsersIcon className="w-8 h-8 text-teal-600" />} />
-        <StatCard title="Total de Pets" value={pets.length} icon={<PawIcon className="w-8 h-8 text-teal-600" />} />
-        <StatCard title="Agendamentos Futuros" value={upcomingAppointments} icon={<CalendarIcon className="w-8 h-8 text-teal-600" />} />
-        <StatCard title="Consultas Hoje" value={weeklyData[0].agendamentos} icon={<HomeIcon className="w-8 h-8 text-teal-600" />} />
+        <StatCard title="Total de Clientes" value={clients.length} icon={<UsersIcon className="w-8 h-8 text-slate-600" />} />
+        <StatCard title="Total de Pets" value={pets.length} icon={<PawIcon className="w-8 h-8 text-slate-600" />} />
+        <StatCard title="Agendamentos Futuros" value={upcomingAppointments} icon={<CalendarIcon className="w-8 h-8 text-slate-600" />} />
+        <StatCard title="Consultas Hoje" value={weeklyData[0].agendamentos} icon={<HomeIcon className="w-8 h-8 text-slate-600" />} />
       </div>
 
       <div className="bg-white p-6 rounded-lg shadow-md">
@@ -63,7 +63,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ clients, pets, appointment
               <YAxis allowDecimals={false} />
               <Tooltip />
               <Legend />
-              <Bar dataKey="agendamentos" fill="#14b8a6" name="Agendamentos" />
+              <Bar dataKey="agendamentos" fill="#64748b" name="Agendamentos" />
             </BarChart>
           </ResponsiveContainer>
         </div>

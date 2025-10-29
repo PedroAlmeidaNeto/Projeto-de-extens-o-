@@ -36,7 +36,7 @@ const AppointmentForm: React.FC<{
         <form onSubmit={handleSubmit} className="space-y-4">
             <div>
                 <label className="block text-sm font-medium text-gray-700">Cliente</label>
-                <select value={clientId} onChange={e => { setClientId(e.target.value); setPetId(''); }} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required>
+                <select value={clientId} onChange={e => { setClientId(e.target.value); setPetId(''); }} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required>
                     <option value="">Selecione um cliente</option>
                     {clients.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                 </select>
@@ -44,7 +44,7 @@ const AppointmentForm: React.FC<{
             {clientId && (
                  <div>
                     <label className="block text-sm font-medium text-gray-700">Pet</label>
-                    <select value={petId} onChange={e => setPetId(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required disabled={!availablePets.length}>
+                    <select value={petId} onChange={e => setPetId(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required disabled={!availablePets.length}>
                         <option value="">{availablePets.length > 0 ? 'Selecione um pet' : 'Nenhum pet para este cliente'}</option>
                         {availablePets.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
                     </select>
@@ -52,15 +52,15 @@ const AppointmentForm: React.FC<{
             )}
             <div>
                 <label className="block text-sm font-medium text-gray-700">Data e Hora</label>
-                <input type="datetime-local" value={date} onChange={e => setDate(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <input type="datetime-local" value={date} onChange={e => setDate(e.target.value)} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div>
                 <label className="block text-sm font-medium text-gray-700">Motivo</label>
-                <textarea value={reason} onChange={e => setReason(e.target.value)} rows={3} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-teal-500 focus:border-teal-500" required />
+                <textarea value={reason} onChange={e => setReason(e.target.value)} rows={3} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-slate-500 focus:border-slate-500" required />
             </div>
             <div className="flex justify-end space-x-3 pt-4">
                 <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300">Cancelar</button>
-                <button type="submit" className="px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600">Agendar</button>
+                <button type="submit" className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600">Agendar</button>
             </div>
         </form>
     );
@@ -94,7 +94,7 @@ export const Appointments: React.FC<AppointmentsProps> = ({ appointments, client
         <div className="p-8">
              <div className="flex justify-between items-center mb-6">
                 <h1 className="text-4xl font-bold text-gray-800">Agendamentos</h1>
-                <button onClick={() => setModalOpen(true)} className="flex items-center px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 shadow">
+                <button onClick={() => setModalOpen(true)} className="flex items-center px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-600 shadow">
                     <PlusIcon className="w-5 h-5 mr-2" /> Novo Agendamento
                 </button>
             </div>

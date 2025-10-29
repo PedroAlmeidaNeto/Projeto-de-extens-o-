@@ -53,3 +53,12 @@ export const ChatBubbleIcon = ({ className }: { className?: string }) => (
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
     </svg>
 );
+
+export const TruckIcon = ({ className }: { className?: string }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M9 17a2 2 0 100-4 2 2 0 000 4z"/>
+        <path d="M21 17a2 2 0 100-4 2 2 0 000 4z"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v4a2 2 0 01-2 2h-2m-4-6h4m0 6H4v-6h9m-9 0a2 2 0 00-2 2v4a2 2 0 002 2h2"/>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 4h-4a2 2 0 00-2 2v4h6V6a2 2 0 00-2-2z"/>
+    </svg>
+);
